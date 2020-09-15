@@ -14,9 +14,31 @@ const cekHariKerja = (day) =>{
 })
 }
 
-cekHariKerja()
+
+
+cekHariKerja('senin')
 .then((result)=>{
-	console.log(result)
-}).catch((error)=>{
+	console.log('hari ini adalah hari',result)
+})
+.catch((error)=>{
 	console.log(error.message)
 })
+
+
+
+// const hariKerja = async() =>{
+// 	try{
+// 		let result = await cekHariKerja('senin')
+// 		console.log('hari ini adalah',result)
+// 	}catch (error){
+// 		console.log(error.message)
+// 	}finally{
+// 		console.log('selesai')
+// 	}
+// }
+// hariKerja()
+
+//penjelasan
+////then catch dan try catch sama sama memiliki fungsi untuk mengolah hasil sukses dan gagal.
+// dan memudahkan kita dalam proses debugging dan menangani kesalahan pada program
+//tetapi try-catch itu biasanya untuk proses synchronous
